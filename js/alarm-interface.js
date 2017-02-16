@@ -1,4 +1,4 @@
-var Alarm=require("./../js/alarm.js").alarmModule;
+var Alarm = require("./../js/alarm.js").alarmModule;
 
 $(document).ready(function () {
 
@@ -6,15 +6,6 @@ $(document).ready(function () {
   $("#AlarmButton").on('click',function(){
     userInput = moment($("#alarmTime").val(), "hh:mm A");
     $('#displayMessage').append('<p>Alarm set at ' + userInput.format("hh:mm A") +' </p>');
+    Alarm();
 
   });
-
-$(document).ready(function(){
-  // $('#time').text(moment(new Date()).format('H:mm'));
-
-  setInterval(function() {
-    $('#time').text(moment(new Date()).format('H:mm:ss'));
-   }, 1000);
-
-
-});
